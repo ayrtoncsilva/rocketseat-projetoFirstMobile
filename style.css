@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-head: 'Staatliches', sans-serif;
+    --ff-body: 'Palanquin', sans-serif;
+
+    --bg-color-head: hsla(218, 17%, 62%, 1);
+    --bg-color-headtexting: hsla(275, 18%, 79%, 1);
+    --bg-colorBody: hsla(233, 100%, 97%, 1);
+    --bg-colorH2:hsla(232, 17%, 35%, 1);
+
+
+    font-size: 62.5%;
+    --fs-heading: 4rem;
+    --fs-text: 2rem;
+}
+
+.page {
+    width: 38.4rem;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+    background: var(--bg-colorBody); 
+}
+
+body {
+   font-size: var(--fs-text);
+   text-align: center;
+}
+
+header {
+    background: var(--bg-color-head);
+    height: 27.9rem;
+    align-items: center;
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+header h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 2.9rem;
+    background: var(--bg-color-headtexting);
+    font-family: 'Staatliches', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.5rem;
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem 0;
+
+}
+
+.title {
+    min-width: 38.4rem;
+    height: 4.7rem;
+    position: absolute;
+    top: 18rem;
+    text-align: center;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+}
+
+main p{
+    font-family: 'Palanquin';
+    font-size: 2rem;
+    padding: 1.4rem 6.3rem;
+    line-height: 1.5rem;
+    color: #23053A;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    animation: downtop 700ms 350ms backwards;
+}
+
+.card h2 {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: #4A4E69;
+    background: #FEEAFA;
+    border-radius: 20px;
+
+
+    position: absolute;
+    top: 1.7rem;
+    left: 21.5rem;
+
+    width: 11.2rem;
+    text-align: center;
+    animation: topdown 800ms 400ms backwards;
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
